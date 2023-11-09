@@ -2,7 +2,15 @@
     "conversas": [
         {
             "mensagem": ["Quais os serviços a empresa fornece?"],
-            "resposta": "A TratorCenter fornece dois macros serviços, 1- Manutenções em tratores, 2- Venda de peças e equipamentos."
+            "resposta": "A TratorCenter fornece dois macros serviços, 1- Manutenções em tratores, 2- Venda de peças e equipamentos. Para saber mais digite 1 ou 2. "
+        },
+        {
+            "mensagem": ["1"],
+            "resposta": "O serviço de manutenção em tratores consiste em troca de óleo, troca de freios, drenagem dos filtros de combustíveis e lubrificação."
+        },
+        {
+            "mensagem": ["2"],
+            "resposta": "A TratorCenter vende pneus, correias, pistões para motores dos tratores e peças de reposição."
         }
     ]
 }
