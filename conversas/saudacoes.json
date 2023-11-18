@@ -1,19 +1,19 @@
 {
     "conversas": [
         {
-            "mensagem": ["oi", "olá", "tudo bem?"],
+            "mensagens": ["oi", "olá", "tudo bem?"],
             "resposta": "Olá, Sou Maria, o robô de atendimento da TratorCenter. Como posso te ajudar?"
         },
         {
-            "mensagem": ["bom dia"],
+            "mensagens": ["bom dia"],
             "resposta": "Bom dia, sou Maria, o robô de atendimento da TratorCenter. Como posso te ajudar?"
         },
         {
-            "mensagem": ["boa tarde"],
+            "mensagens": ["boa tarde"],
             "resposta": "Boa tarde, sou Maria, o robô de atendimento da TratorCenter. Como posso te ajudar?"
         },
         {
-            "mensagem": ["boa noite"],
+            "mensagens": ["boa noite"],
             "resposta": "Boa noite, sou Maria, o robô de atendimento da TratorCenter. Como posso te ajudar?"
         }
     ]

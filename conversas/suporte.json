@@ -1,19 +1,19 @@
 {
     "conversas": [
         {
-            "mensagem":["Quais modelos de tratores a empresa fornece assistência técnica?"],
+            "mensagens":["Quais modelos de tratores a empresa fornece assistência técnica?"],
             "resposta": "MicroTrator, Trator de tração simples, Trator pneu 2RM e Trator pneu 4RM"
         },
         {
-            "mensagem":["Quais os valores da assistência técnica?"],
+            "mensagens":["Quais os valores da assistência técnica?"],
             "resposta": "Troca de óleo 7.000, Troca de Freios 8.000, Drenagem dos filtros de combustíveis 12.000 e lubrificação 9.000"
         },
         {
-            "mensagem":["Qual valor da revisão?"],
+            "mensagens":["Qual valor da revisão?"],
             "resposta": "A revisão custa 10.000"
         },
         {
-            "mensagem":["Quais as ferramentas agricólas disponíveis na empresa?"],
+            "mensagens":["Quais as ferramentas agricólas disponíveis na empresa?"],
             "resposta": "Arado, enxada, serrote e pulverizador."
         }
     ]

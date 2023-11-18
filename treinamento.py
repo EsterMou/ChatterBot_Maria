@@ -4,8 +4,8 @@ import json
 
 CONVERSAS = [
     "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\saudacoes.json",
-    "C:\Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\servicos.json",
-    "C:\Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\suporte.json"
+    "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\servicos.json",
+    "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\suporte.json"
 ]
 
 def iniciar():
@@ -28,11 +28,11 @@ def carregar_conversas():
 
 def treinar(treinador, conversas):
     for conversa in conversas:
-        for mensagem_resposta in conversa:
-            mensagem = mensagem_resposta["mensagem"]
-            resposta = mensagem_resposta["resposta"]
+        for mensagens_resposta in conversa:
+            mensagens = mensagens_resposta["mensagens"]
+            resposta = mensagens_resposta["resposta"]
             
-            print(f"Treinando Robô Maria. Mensagens: {mensagem}. Resposta: {resposta}")
+            print(f"Treinando Robô Maria. Mensagens: {mensagens}. Resposta: {resposta}")
             for mensagem in mensagens:
                 treinador.train([mensagem, resposta])
                 
