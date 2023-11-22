@@ -1,6 +1,20 @@
 from chatterbot import ChatBot
+from difflib import SequenceMatcher
 
-CONFIANCA_MINIMA = 0.70
+CONFIANCA_MINIMA = 0.60
+
+def comparar_mensagens(mensagem_digitada, mensagem_candidata):
+    confianca = 0.0
+    
+    digitada = mensagem_digitada.text
+    candidata = mensagem_candidata.text 
+    if digitada and candidata:
+        confianca = SequenceMatcher(None,
+            digitada,
+            candidata)
+        confianca = round(confianca.ratio(), 2)
+        
+    return confianca
 
 def iniciar():
     robo = ChatBot("Maria, Robô de Atendimento da TratorCenter",
