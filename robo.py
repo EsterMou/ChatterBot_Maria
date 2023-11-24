@@ -18,12 +18,13 @@ def comparar_mensagens(mensagem_digitada, mensagem_candidata):
 
 def iniciar():
     robo = ChatBot("Maria, Robô de Atendimento da TratorCenter",
-        read_only=True,
-        Logic_adapters = [
-            {
-                "import_path": "chatterbot.logic.BestMatch"
-            }
-        ])
+                        read_only=True,
+                        statement_comparison_function=comparar_mensagens,
+                        Logic_adapters = [
+                            {
+                                "import_path": "chatterbot.logic.BestMatch"
+                            }
+                        ])
     
     return robo
 
@@ -31,6 +32,7 @@ def executar_robo(robo):
     while True:
         mensagem = input("Digite alguma coisa... \n")
         resposta = robo.get_response(mensagem.lower())
+        print(f"o valor da confiança é: {resposta.confidence}")
         if resposta.confidence >= CONFIANCA_MINIMA:
             print(">>", resposta.text)
         else:
