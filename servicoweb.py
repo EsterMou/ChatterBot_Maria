@@ -1,7 +1,7 @@
 from robo import *
 from flask import Flask
 
-VERSAO = "0.2"
+VERSAO = "0.1"
 
 robo = iniciar()
 servico_robo = Flask(__name__)

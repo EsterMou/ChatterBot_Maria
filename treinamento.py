@@ -3,9 +3,9 @@ from chatterbot.trainers import ListTrainer
 import json
 
 CONVERSAS = [
-    "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\saudacoes.json",
-    "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\servicos.json",
-    "/Users\moura\OneDrive\Documentos\GitHub\ChatterBot_Maria\conversas\suporte.json"
+    "conversas\saudacoes.json",
+    "conversas\servicos.json",
+    "conversas\suporte.json"
 ]
 
 def iniciar():
@@ -15,16 +15,15 @@ def iniciar():
     return treinador
 
 def carregar_conversas():
-    conversas = []
+    carregado, conversas = False, []
     
     for arquivo_conversas in CONVERSAS:
-        with open(arquivo_conversas, "r") as arquivo:
+        with open(arquivo_conversas, "r", encoding="utf-8") as arquivo:
             conversas_para_treinamento = json.load(arquivo)
             conversas.append(conversas_para_treinamento["conversas"])
+        carregado = True
             
-            arquivo.close()
-            
-    return conversas
+    return carregado, conversas
 
 def treinar(treinador, conversas):
     for conversa in conversas:

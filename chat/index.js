@@ -3,7 +3,7 @@ var http = require('http');
 var server = http.Server(app)
 var io = require('socket.io')(server);
 var port = process.env.PORT || 3000;
-var botURL = 'http://127.0.0.1:5000/'
+var botURL = "http://127.0.0.1:5000/";
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + '/index.html');
